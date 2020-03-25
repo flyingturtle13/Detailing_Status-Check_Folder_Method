@@ -55,25 +55,25 @@ See below for the flow chart and map depicting overall structure and flow of inf
 </p> 
 
 ## Installing and Running Application
-<p> 1. Clone or download project. </p>
-<p> 2. Open FileStatusCheck_Template.xlsm. Check if macros already loaded. If not, import included CLS file.</p>
-<p> 3. Create level folders are created for model files to be posted. </p>
-<p> 4. Ensure level cell values in column B match folder names</p>
-<p> 5. Revise Discipline Code in row 1 to match that of the model file names based on standardized file naming convention.
-<p> 6. Check subroutine code and update parameters in code as needed.</p>
-    * Discipline check range if correct
+1. Clone or download project. </br>
+2. Open FileStatusCheck_Template.xlsm. Check if macros already loaded. If not, import included CLS file.</br>
+3. Create level folders are created for model files to be posted. </br>
+4. Ensure level cell values in column B match folder names.</br>
+5. Revise Discipline Code in row 1 to match that of the model file names based on standardized file naming convention.</br>
+6. Check subroutine code and update parameters in code as needed. </br>
+   * Discipline check range if correct
          <p align="center">
          <img src="https://user-images.githubusercontent.com/44215479/77499963-da58b480-6e10-11ea-9b1b-846232a82869.png" width="600">
          </p>
-    * check if column is correct where model file date posted is stored.
+   * check if column is correct where model file date posted is stored.
          <p align="center">
          <img src="https://user-images.githubusercontent.com/44215479/77500083-38859780-6e11-11ea-8b79-107f847d185a.png" width="600">
          </p>
-<p> 7. When setup is complete, click "Update Detailing Status" button to activate.
-<p> 8. When prompted, paste root folder path to where level folders are located.
-<p> 9. Update the report with correct data visual image per https://synoptic.design/. </p>
-<p> 10. Ensure Data Source path is pointing to excel file: FileStatusCheck_Template.xlsm
-<p> 11. Refresh report to update data visuals
+7. When setup is complete, click "Update Detailing Status" button to activate. </br>
+8. When prompted, paste root folder path to where level folders are located. </br>
+9. Update the report with correct data visual image per https://synoptic.design/.</br>
+10. Ensure Data Source path is pointing to excel file: FileStatusCheck_Template.xlsm </br>
+11. Refresh report to update data visuals. </br>
 
 ## Power BI Report
 
