@@ -8,8 +8,8 @@ Environment setup required to implement subroutine
 
 * Repository Items:
   * Subroutine .cls file
-  * Associated Excel worksheet implementing subroutine
-  * Power BI report referencing Excel spreadsheet
+  * Associated Excel workbook (.xlsm) implementing subroutine
+  * Power BI report template (.pbit) referencing Excel spreadsheet
 
 * IDE:
   * Excel Macros
