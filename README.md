@@ -1,7 +1,7 @@
 # Detailing Model Files in Focus Zone Folders Status Checker
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At its fundamental purpose, this subroutine checks a folder if a file exists and last updated date per column and row header name. It requires a user to input root folder path to where files reside. </br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For this application, detailers are to post model files to associated level folders when ready for coordination and appending to Navisworks (NWF) federated model. The subroutine automates checking if the detailing model files exist in the level folders and reports last posting date. The Excel file is then consumed in Power BI as a visual report showing detailing status (Up to what level trade detailers are at and tooltip indicating last posting date).</br>
-**Note:** Information regarding updating the Power BI report data visuals will not be discussed.  Refer to https://synoptic.design/ for information about updating report visuals.
+**Note:** *Information regarding updating the Power BI report data visuals will not be discussed.  Refer to https://synoptic.design/ for information about updating report visuals.*
 
 ## Getting Started
 Environment setup required to implement subroutine
