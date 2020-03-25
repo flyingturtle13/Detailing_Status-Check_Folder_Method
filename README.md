@@ -1,12 +1,13 @@
 # Detailing Model Files in Focus Zone Folders Status Checker
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;At its fundamental purpose, this subroutine checks a folder if a file exists and last updated date per column and row header name. It requires a user to input root folder path to where files reside. </br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For this application, detailers are to post model files to associated level folders when ready for coordination and appending to Navisworks (NWF) federated model. The subroutine automates checking if the detailing model files exist in the level folders and reports last posting date. The Excel file is then consumed in Power BI as a visual report showing detailing status (Up to what level trade detailers are at and tool tip indicating last posting date).
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;For this application, detailers are to post model files to associated level folders when ready for coordination and appending to Navisworks (NWF) federated model. The subroutine automates checking if the detailing model files exist in the level folders and reports last posting date. The Excel file is then consumed in Power BI as a visual report showing detailing status (Up to what level trade detailers are at and tool tip indicating last posting date).</br>
+Note: Information regarding updating the Power BI report data visuals will not be discussed.  Refer to https://synoptic.design/ for information about updating report visuals.
 
 ## Getting Started
 Environment setup required to implement subroutine
 
 * Repository Items:
-  * Subroutine .bas file
+  * Subroutine .cls file
   * Associated Excel worksheet implementing subroutine
   * Power BI report referencing Excel spreadsheet
 
@@ -17,38 +18,42 @@ Environment setup required to implement subroutine
   * VBA (Microsoft Visual Basic)
 
 * Output Type:
-  * Basic Files (.bas)
+  * Class File (.cls)
 
-## Application Development
-Application features and specs
+## Subroutine Development
+Subroutine features and specs
 
 * User Interface
-  * 4 number combination to be guessed
-  * number of remaining attempts visible
-  * view history of attempt guesses including number of matched digits and number of matched digit positions
+  * Button (Update Detailing Status) to activate feature
+  * Paste root folder path to where files reside when prompted
+  * Refresh file in Power BI to update report data
 
-* Application Specifications
-  * numbers can be duplicated
-  * number range is from 0 to 7
-  * Using Random Number Generator API (https://www.random.org/integers) to provide computer number combination. 
+* Subroutine Specifications
+  * Create folders for levels/focus zones for model file posting
+  * Cell values in orange highlighted cells should match folder names where model files to be checked are/to be posted
+  * Revise range if number of levels (row) and disciplines (column) change
+  * Revise column number for recording file posted date if range is revised
+  * Model file name should use underscore ( _ ) as dilimeter.
+  * Cell values in blue highlighted cells should match discipline code used in the model file name
+    * Ex: MD ==> ProjectName_LXX_MD_CompanyCode.nwc, will use MD to match with file name
 
-* Extensions
-  * Random quote generated using API (https://api.forismatic.com/api/1.0/?method=getQuote&lang=en&format=jsonp&jsonp=?) when player is successful at decoding the combination.
-  * User Hint (updated 3/20/2020): User can choose to receive a hint in the form of receiving a number not in the combination.  User can get up to a maximum of 3 hints.  In future update, receiving a hint will affect number of attempts left.
-
-## Application Structure
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See below for the flow chart depicting overall structure and flow of the application.  It highlights visible and backend processes.  The application begins at the Main Menu symbol.</br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To develop Mastermind, the WPF application in visual studio serves as the foundation for the user interface. Various controls (mostly buttons) are implemented so that the user can interact and navigate through the game.  The controls also send information to the backend to process API web calls, evaluate user input, and determine results.  
+## Workflow Structure Implementing Subroutine
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;See below for the flow chart and map depicting overall structure and flow of information.
 <p align="center">
   <img src="https://user-images.githubusercontent.com/44215479/74339457-f7519080-4d58-11ea-90d3-88cd95b4ca2c.png" width="800">
 </p> 
 
 ## Installing and Running Application
 <p> 1. Clone or download project. </p>
-<p> 2. Open REACH_Mastermind_Project.sln in Visual Studio 2019. </p>
-<p> 3. Ensure that the library packages stated in Getting Started are installed and referenced. </p>
-<p> 4. The application can then be run in debug mode. </p>
-<p> 5. To view all game outcomes (especially with viewing the randomly generated quote when successful at guessing the combination) uncomment line 31 in the 03_NumberRequest class to view the API generated combination.
+<p> 2. Open FileStatusCheck_Template.xlsm. Check if macros alread loaded. If not, import included CLS file.</p>
+<p> 3. Create level folders are created for model files to be posted. </p>
+<p> 4. Ensure level cell values in column B match folder names</p>
+<p> 5. Revise Discipline Code in row 1 to match that of the model file names based on standardized file naming convention.
+<p> 6. When setup is complete, click "Update Detailing Status" button to activate.
+<p> 7. When prompted, paste root folder path to where level folders are located.
+<p> 8. Update the report with correct data visual image per https://synoptic.design/. </p>
+<p> 9. Ensure Data Source path is pointing to excel file: FileStatusCheck_Template.xlsm
+<p> 10. Refresh report to update data visuals
  <p align="center">
   <img src="https://user-images.githubusercontent.com/44215479/74343016-3e428480-4d5f-11ea-9575-30c933ad4b0b.png" width="600">
 </p>
